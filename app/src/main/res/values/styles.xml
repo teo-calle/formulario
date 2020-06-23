@@ -3,7 +3,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/deepskyblue</item>
-        <item name="colorPrimaryDark">@color/crimson</item>
+        <item name="colorPrimaryDark">@color/dodgerblue</item>
         <item name="colorAccent">@color/gold</item>
     </style>
 

@@ -1,5 +1,6 @@
 package com.teo.formulario
 
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,11 +15,12 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
 
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var options_spiner = arrayOf("Medellin","Bogota","Manizales","Cali","Barranquilla")
+        //var options_spiner = arrayOf("Medellín","Bogotá","Manizales","Cali","Barranquilla")
 
 
         //val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, options_spiner )
@@ -26,10 +28,10 @@ class MainActivity : AppCompatActivity() {
 
         var adapter =ArrayAdapter.createFromResource(this,R.array.ciudades,android.R.layout.simple_spinner_item)
         adapter.setDropDownViewResource(android.R.layout.simple_dropdown_item_1line)
-        spinner.adapter= adapter
+        sp_cuidades.adapter= adapter
 
         var ciudad:String=""
-        spinner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
+        sp_cuidades.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
             override fun onItemSelected(parent:AdapterView<*>, view: View, position: Int, id: Long){
                 // Display the selected item text on text view
                 ciudad = "${parent.getItemAtPosition(position).toString()}"
@@ -46,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         val mes =c.get(Calendar.MONTH)
         val dia = c.get(Calendar.DAY_OF_MONTH)
 
-        tvFecha.setOnClickListener{
+        iv_calendar.setOnClickListener{
             val dpd=DatePickerDialog(this,DatePickerDialog.OnDateSetListener {view:DatePicker , mYear:Int, mMonth:Int, mDay: Int ->
                 tvFecha.setText(""+mDay+"/"+(mMonth+1)+"/"+mYear)
             },ano,mes,dia)
@@ -122,4 +124,3 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
-
