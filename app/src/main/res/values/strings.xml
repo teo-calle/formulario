@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Formulario</string>
+    <string name="titulo">Formulario de Registro</string>
+    <string name="nombre">Nombre</string>
+    <string name="correo">Correo electronico</string>
+    <string name="telefono">Telefono</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="repcontrasena">Repetir contraseña</string>
+    <string name="masculino">Masculino</string>
+    <string name="femenino">Femenino</string>
+    <string name="check_viajar">Viajar</string>
+    <string name="check_leer">Leer</string>
+    <string name="check_bailar">Bailar</string>
+    <string name="check_series">Series</string>
+    <string-array name="ciudades">
+        <item>Medellin</item>
+        <item>Bogota</item>
+        <item>Cali</item>
+        <item>Manizales</item>
+        <item>Barranquilla</item>
+    </string-array>
+
+    <string name="registrarse">Registrarse</string>
+    <string name="text_resultado">Resultado</string>
+    <string name="tv_fecha">"Fecha de Nacimiento:"</string>
+    <string name="hint_fecha">DD/MM/AAAA</string>
+</resources>
